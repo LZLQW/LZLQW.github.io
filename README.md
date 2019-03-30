@@ -1,5 +1,5 @@
-# Welcome to LZLQW's blog    
-### HELLO! Simo  
+# HELLO! Simo   
+# Welcome to LZLQW's blog     
 ***
 
 GIT的基本操作  
