@@ -1,7 +1,5 @@
-# Welcome to LZLQW's blog
-每天写1000个单词改变了我的生活
-HELLO! Simo
------------
+# Welcome to LZLQW's blog    
+### HELLO! Simo  
 ***
 
 GIT的基本操作  
