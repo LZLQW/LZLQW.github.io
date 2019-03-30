@@ -4,18 +4,18 @@
 GIT的基本操作  
 ===========
    自报家门:
-    *1. `$ git config --global user.name "my name"`  
-    *2. `$ git config --global user.name "email@***.com"`
+    * 1. `$ git config --global user.name "my name"`  
+    * 2. `$ git config --global user.name "email@***.com"`
    
    创建版本库（创建空目录）
-    *1. `$ mkdir learngit`  
-    *2. `$ cd learngit`  
-    *3. `$ pwd`(显示当前目录)  
-    *4. `$ git init`(使目录变为git可管理的仓库)  
+    * 1. `$ mkdir learngit`  
+    * 2. `$ cd learngit`  
+    * 3. `$ pwd`(显示当前目录)  
+    * 4. `$ git init`(使目录变为git可管理的仓库)  
     
    添加文件到git仓库  
-    *1. `$ git add example.txt`  
-    *2. `$ git commit -m "提交说明"`  
+    * 1. `$ git add example.txt`  
+    * 2. `$ git commit -m "提交说明"`  
       commit 一次可提交多个文件，add 不同的文件到暂存区，随后使用commit提交即可，add 可反复多次使用  
       git add 命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支
    
@@ -75,8 +75,8 @@ GIT的基本操作
      
    `$ rm example.txt`  
        从本地删除文件  
-       *1. `$ git rm example.txt`  
+       * 1. `$ git rm example.txt`  
           `$ git commit -m "删除说明"`  
             从版本库删除文件example.txt  
-       *2. `$ git checkout --example.txt`  
+       * 2. `$ git checkout --example.txt`  
             从版本库中恢复本地误删除的文件  
