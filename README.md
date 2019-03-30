@@ -4,11 +4,11 @@
 
 GIT的基本操作  
 ===========
-   自报家门:
+   自报家门:  
     1. `$ git config --global user.name "my name"`  
     2. `$ git config --global user.name "email@***.com"`
    
-   创建版本库（创建空目录）
+   创建版本库（创建空目录）  
     1. `$ mkdir learngit`  
     2. `$ cd learngit`  
     3. `$ pwd`(显示当前目录)  
