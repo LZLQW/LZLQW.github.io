@@ -20,15 +20,15 @@ GIT的基本操作
    
    $ git status  
     查看当前仓库状态  
-     example：/*On branch master  
+     example：*On branch master  
                 Changes not staged for commit:  
                     (use "git add <file>..." to update what will be committed)  
                     (use "git checkout -- <file>..." to discard changes in working directory)  
                      modified:   readme.txt  
-                 no changes added to commit (use "git add" and/or "git commit -a")**/  
+                 no changes added to commit (use "git add" and/or "git commit -a")*
                 （文件已修改未提交）  
-                /*On branch master  
-                 nothing to commit, working tree clean*/  
+                *On branch master  
+                 nothing to commit, working tree clean*  
                 （暂存区为空 工作区也未修改）  
     
    $ git diff example.txt  
@@ -39,10 +39,10 @@ GIT的基本操作
     
    $ git log --pretty=oneline  
       精简版  
-      example:/*$ git log --pretty=oneline  
+      example:*$ git log --pretty=oneline  
                 1094adb7b9b3807259d8cb349e7df1d4d6477073 (HEAD -> master) append GPL  
                 e475afc93c209a690c39c13a46716e8fa000c366 add distributed  
-                eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 wrote a readme file*/  
+                eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 wrote a readme file*  
               1094ad...是commit id（版本号）  
               HEAD表示当前版本，上一个是HEAD^,上上一个版本是HEAD^^,以此类推...  
       版本回退：  
@@ -53,11 +53,11 @@ GIT的基本操作
           
    $ git reflog  
       查看每一次命令做了什么（查看命令历史便于回到未来哪个版本）  
-       example:/*$ git reflog  
-                 e475afc HEAD@{1}: reset: moving to HEAD^  
-                 1094adb (HEAD -> master) HEAD@{2}: commit: append GPL  
-                 e475afc HEAD@{3}: commit: add distributed  
-                 eaadf4e HEAD@{4}: commit (initial): wrote a readme file*/  
+       example:*$ git reflog  
+                e475afc HEAD@{1}: reset: moving to HEAD^  
+                1094adb (HEAD -> master) HEAD@{2}: commit: append GPL  
+                e475afc HEAD@{3}: commit: add distributed  
+                eaadf4e HEAD@{4}: commit (initial): wrote a readme file*  
      
    $ cat example.txt  
       查看example.txt的内容  
