@@ -1,6 +1,6 @@
 # HELLO! Simo   
 # Welcome to LZLQW's blog     
-***
+---
 GIT的基本操作
 ===========
    自报家门:  
