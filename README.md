@@ -21,12 +21,12 @@ GIT的基本操作
    
    `$ git status`  
     查看当前仓库状态  
-     >example：*`On branch master  
-      >>          Changes not staged for commit:  
-        >>>            (use "git add <file>..." to update what will be committed)  
-          >>>          (use "git checkout -- <file>..." to discard changes in working directory)  
-            >>>         modified:   readme.txt  
-              >>   no changes added to commit (use "git add" and/or "git commit -a")`*
+     example：*`On branch master  
+                Changes not staged for commit:  
+                    (use "git add <file>..." to update what will be committed)  
+                    (use "git checkout -- <file>..." to discard changes in working directory)  
+                     modified:   readme.txt  
+                 no changes added to commit (use "git add" and/or "git commit -a")`*
                 （文件已修改未提交）  
                 *On branch master  
                  nothing to commit, working tree clean*  
@@ -43,9 +43,9 @@ GIT的基本操作
       example:*`$ git log --pretty=oneline  
                 1094adb7b9b3807259d8cb349e7df1d4d6477073 (HEAD -> master) append GPL  
                 e475afc93c209a690c39c13a46716e8fa000c366 add distributed  
-                eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 wrote a readme file*  
-              1094ad...是commit id（版本号）  
-              HEAD表示当前版本，上一个是HEAD^,上上一个版本是HEAD^^,以此类推...  
+                eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 wrote a readme file`*  
+             1094ad...是commit id（版本号）  
+             HEAD表示当前版本，上一个是HEAD^,上上一个版本是HEAD^^,以此类推...  
       版本回退：  
       `$ git reset --hard HEAD^`  
         或者  
