@@ -54,11 +54,11 @@ GIT的基本操作
           
    `$ git reflog`  
       查看每一次命令做了什么（查看命令历史便于回到未来哪个版本）  
-       example:`*$ git reflog  
+       example:*`$ git reflog  
                 e475afc HEAD@{1}: reset: moving to HEAD^  
                 1094adb (HEAD -> master) HEAD@{2}: commit: append GPL  
                 e475afc HEAD@{3}: commit: add distributed  
-                eaadf4e HEAD@{4}: commit (initial): wrote a readme file*`  
+                eaadf4e HEAD@{4}: commit (initial): wrote a readme file`*  
      
    `$ cat example.txt`  
       查看example.txt的内容  
