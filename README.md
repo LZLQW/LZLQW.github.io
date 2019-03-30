@@ -21,12 +21,12 @@ GIT的基本操作
    
    `$ git status`  
     查看当前仓库状态  
-     example：*On branch master  
+     example：*`On branch master  
                 Changes not staged for commit:  
                     (use "git add <file>..." to update what will be committed)  
                     (use "git checkout -- <file>..." to discard changes in working directory)  
                      modified:   readme.txt  
-                 no changes added to commit (use "git add" and/or "git commit -a")*
+                 no changes added to commit (use "git add" and/or "git commit -a")`*
                 （文件已修改未提交）  
                 *On branch master  
                  nothing to commit, working tree clean*  
