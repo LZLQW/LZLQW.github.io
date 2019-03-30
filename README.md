@@ -1,7 +1,7 @@
 # HELLO! Simo   
 # Welcome to LZLQW's blog     
 ***
-GIT的基本操作  
+GIT的基本操作
 ===========
    自报家门:  
     1. `$ git config --global user.name "my name"`  
