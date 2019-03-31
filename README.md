@@ -1,7 +1,7 @@
 # HELLO! Simo   
 # Welcome to LZLQW's blog     
 ---
-## GIT的基本操作
+
 *Git 只关心文件数据的整体是否发生变化  
 提交时，若文件没有变化，Git 不会再次保存，而只对上次保存作一链接*  
 
@@ -17,6 +17,7 @@
 *在工作目录中修改某些文件。  
 对修改后的文件进行快照，然后保存到暂存区域。  
 提交更新，将保存在暂存区域的文件快照永久转储到 Git 目录中*  
+## GIT的基本操作
    自报家门:  
     1. `$ git config --global user.name "my name"`  
     2. `$ git config --global user.name "email@***.com"`
