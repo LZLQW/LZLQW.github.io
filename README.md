@@ -117,15 +117,14 @@
       (6)使用JavaScript和DOM实现局部刷新.   
  
 onreadystatechange 属性存有处理服务器响应的函数。  
-
 readyState 属性存有服务器响应的状态信息。  
 每当 readyState 改变时，onreadystatechange 函数就会被执行。  
-readyState 属性可能的值：  
-0 请求未初始化（在调用 open() 之前）  
-1 请求已提出（调用 send() 之前）  
-2 请求已发送（这里通常可以从响应得到内容头部）  
-3 请求处理中（响应中通常有部分数据可用，但是服务器还没有完成响应）  
-4 请求已完成（可以访问服务器响应并使用它） 
+>readyState 属性可能的值：  
+>> 0 请求未初始化（在调用 open() 之前）  
+   1 请求已提出（调用 send() 之前）  
+   2 请求已发送（这里通常可以从响应得到内容头部）  
+   3 请求处理中（响应中通常有部分数据可用，但是服务器还没有完成响应）  
+   4 请求已完成（可以访问服务器响应并使用它） 
 example:`xmlHttp.onreadystatechange=function()  
 {  
 if(xmlHttp.readyState==4)  
@@ -134,10 +133,10 @@ document.myForm.time.value=xmlHttp.responseText;
 }  
 }`  
 ### xmlhttprequst的方法  
-open() 有三个参数。    
-第一个参数定义发送请求所使用的方法,  
-第二个参数规定服务器端脚本的URL，  
-第三个参数规定应当对请求进行异步地处理。  
+> open() 有三个参数。    
+>>    第一个参数定义发送请求所使用的方法,  
+      第二个参数规定服务器端脚本的URL，  
+      第三个参数规定应当对请求进行异步地处理。  
 example: `xmlHttp.open("GET","test.php",true);`  
 若为true，即为异步请求，需要写一个回调函数（xmlHttp.onstatechange=function()中写）    
 回调函数的核心内容，就是获取后台返回的数据，然后将这个数据赋值给div。  
