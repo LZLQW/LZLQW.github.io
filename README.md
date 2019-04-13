@@ -115,4 +115,17 @@
       (4)发送HTTP请求.  
       (5)获取异步调用返回的数据.  
       (6)使用JavaScript和DOM实现局部刷新.   
-       
+### GET与POST请求区别：
+   get是从服务器上获取数据，post是向服务器传送数据。  
+
+   Get方式在通过URL提交数据，数据在URL中可以看到  
+   POST方式，数据放置在HTML HEADER内提交。  
+
+   对于get方式，服务器端用request.getQueryString()可以获取GET请求参数的变量值  
+   对于post方式，服务器端用request.getParameter获取提交的数据。  
+
+   GET方式提交的数据最多只能有1024字节，而POST则没有此限制。  
+
+   使用 Get 的时候，参数会显示在地址栏上，而 Post 不会  
+   所以，如果这些数据是中文数据而且是非敏感数据，那么使用 get  
+   如果用户输入的数据不是中文字符而且包含敏感数据，那么还是使用 post为好。  
