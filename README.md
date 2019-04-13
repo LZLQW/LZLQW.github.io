@@ -134,9 +134,9 @@ document.myForm.time.value=xmlHttp.responseText;
 }`  
 ### xmlhttprequst的方法  
 > open() 有三个参数。    
->>    第一个参数定义发送请求所使用的方法,  
-      第二个参数规定服务器端脚本的URL，  
-      第三个参数规定应当对请求进行异步地处理。  
+>>   1 第一个参数定义发送请求所使用的方法,  
+     2 第二个参数规定服务器端脚本的URL，  
+     3 第三个参数规定应当对请求进行异步地处理。  
 example: `xmlHttp.open("GET","test.php",true);`  
 若为true，即为异步请求，需要写一个回调函数（xmlHttp.onstatechange=function()中写）    
 回调函数的核心内容，就是获取后台返回的数据，然后将这个数据赋值给div。  
