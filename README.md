@@ -132,9 +132,10 @@ if(xmlHttp.readyState==4)
 document.myForm.time.value=xmlHttp.responseText;  
 }  
 }`  
+
 ### xmlhttprequst的方法  
-> open() 有三个参数。    
->> 第一个参数定义发送请求所使用的方法,  
+open() 有三个参数。    
+   第一个参数定义发送请求所使用的方法,  
    第二个参数规定服务器端脚本的URL，  
    第三个参数规定应当对请求进行异步地处理。   
 example: `xmlHttp.open("GET","test.php",true);`  
