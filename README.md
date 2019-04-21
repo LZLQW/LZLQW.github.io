@@ -112,21 +112,18 @@ git reset HEAD <file>可以把暂存区的修改撤销掉，重新放回工作�
 从版本库中恢复本地误删除的文件(未提交的修改无法恢复)  
 
 ### 分支  
-`$ git branch dev`  
 
-+ 创建分支dev  
++ `$ git branch dev`  
+创建分支dev  
 
-`$ git checkout dev`  
++ `$ git checkout dev`  
+切换到分支dev，此时会显示`Switched to branch 'dev'` `$ git branch -b dev`表示快速创建并切换到dev分支  
 
-+ 切换到分支dev，此时会显示`Switched to branch 'dev'` `$ git branch -b dev`表示快速创建并切换到dev分支  
++ `$ git branch`  
+查看当前分支，当前分支前面会显示\*  
 
-`$ git branch`  
-
-+ 查看当前分支，当前分支前面会显示\*  
-
-`$ git merge`  
-
-+ 合并指定分支到当前分支  
++ `$ git merge`  
+合并指定分支到当前分支  
 合并后即可删除分支dev `$ git branch -d dev`  
        
 ---
