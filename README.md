@@ -77,32 +77,31 @@ Git 管理项目时，文件流转的三个工作区域：工作区，暂存区�
 + `$ git reset --hard 1094a`   
     即填写版本号，没必要写全但也不能太少。当然也可以这样使用回到最新的那个版本 append GPL  
           
-`$ git reflog`  
-
-+ 查看每一次命令做了什么（查看命令历史便于回到未来哪个版本）  
++ `$ git reflog`  
+查看每一次命令做了什么（查看命令历史便于回到未来哪个版本）  
        >example:*`$ git reflog  
         >>> e475afc HEAD@{1}: reset: moving to HEAD^  
                 1094adb (HEAD -> master) HEAD@{2}: commit: append GPL  
                 e475afc HEAD@{3}: commit: add distributed  
                 eaadf4e HEAD@{4}: commit (initial): wrote a readme file`*  
      
-`$ cat example.txt`  
++ `$ cat example.txt`  
 
-+ 查看example.txt的内容  
+查看example.txt的内容  
      
-`$ git checkout --example.txt`  
++ `$ git checkout --example.txt`  
 
-+ 把readme.txt文件在工作区的修改全部撤销，这里有两种情况：  
+把readme.txt文件在工作区的修改全部撤销，这里有两种情况：  
 一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；  
     一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。  
    总之，就是让这个文件回到最近一次git commit或git add时的状态。  
    符号 ‘--’必不可少  
        
-`$ git reset HEAD example.txt`  
++ `$ git reset HEAD example.txt`  
 
-+ git reset HEAD <file>可以把暂存区的修改撤销掉，重新放回工作区  
+git reset HEAD <file>可以把暂存区的修改撤销掉，重新放回工作区  
      
-`$ rm example.txt`  
++ `$ rm example.txt`  
 >从本地删除文件  
 
 + 1.`$ git rm example.txt`  
