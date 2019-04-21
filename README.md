@@ -52,28 +52,34 @@ Git 管理项目时，文件流转的三个工作区域：工作区，暂存区�
              （暂存区为空 工作区也未修改）  
     
 `$ git diff example.txt`
->查看文件修改了什么  
+
++ 查看文件修改了什么  
   
 `$ git log`  
->查看提交日志（历史）
+
++ 查看提交日志（历史）
     
  `$ git log --pretty=oneline`  
->精简版
->>example: `$ git log --pretty=oneline
->>>1094adb7b9b3807259d8cb349e7df1d4d6477073 (HEAD -> master) append GPL  
+
++ 精简版
+>example:   
+>>` $ git log --pretty=oneline
+	1094adb7b9b3807259d8cb349e7df1d4d6477073 (HEAD -> master) append GPL  
                 e475afc93c209a690c39c13a46716e8fa000c366 add distributed  
                 eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 wrote a readme file`
 >>>1094ad...是commit id（版本号）  
              HEAD表示当前版本，上一个是HEAD^,上上一个版本是HEAD^^,以此类推  
 
 版本回退：
->`$ git reset --hard HEAD^`  
-   或者  
-    `$ git reset --hard 1094a`   
+
++ `$ git reset --hard HEAD^`  
+   或者
++ `$ git reset --hard 1094a`   
     即填写版本号，没必要写全但也不能太少。当然也可以这样使用回到最新的那个版本 append GPL  
           
 `$ git reflog`  
->查看每一次命令做了什么（查看命令历史便于回到未来哪个版本）  
+
++ 查看每一次命令做了什么（查看命令历史便于回到未来哪个版本）  
        >example:*`$ git reflog  
         >>> e475afc HEAD@{1}: reset: moving to HEAD^  
                 1094adb (HEAD -> master) HEAD@{2}: commit: append GPL  
@@ -81,95 +87,107 @@ Git 管理项目时，文件流转的三个工作区域：工作区，暂存区�
                 eaadf4e HEAD@{4}: commit (initial): wrote a readme file`*  
      
 `$ cat example.txt`  
->查看example.txt的内容  
+
++ 查看example.txt的内容  
      
 `$ git checkout --example.txt`  
- >把readme.txt文件在工作区的修改全部撤销，这里有两种情况：  
-   一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；  
+
++ 把readme.txt文件在工作区的修改全部撤销，这里有两种情况：  
+一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；  
     一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。  
    总之，就是让这个文件回到最近一次git commit或git add时的状态。  
    符号 ‘--’必不可少  
        
 `$ git reset HEAD example.txt`  
->git reset HEAD <file>可以把暂存区的修改撤销掉，重新放回工作区  
+
++ git reset HEAD <file>可以把暂存区的修改撤销掉，重新放回工作区  
      
 `$ rm example.txt`  
- >从本地删除文件  
+>从本地删除文件  
 
->1.`$ git rm example.txt`  
->>`$ git commit -m "删除说明"`  
++ 1.`$ git rm example.txt`  
+       `$ git commit -m "删除说明"`  
    从版本库删除文件example.txt  
    
->2.`$ git checkout --example.txt`  
->>从版本库中恢复本地误删除的文件(未提交的修改无法恢复)  
++ 2.`$ git checkout --example.txt`  
+从版本库中恢复本地误删除的文件(未提交的修改无法恢复)  
 
 ### 分支  
 `$ git branch dev`  
->创建分支dev  
+
++ 创建分支dev  
 
 `$ git checkout dev`  
->切换到分支dev，此时会显示`Switched to branch 'dev'` `$ git branch -b dev`表示快速创建并切换到dev分支  
+
++ 切换到分支dev，此时会显示`Switched to branch 'dev'` `$ git branch -b dev`表示快速创建并切换到dev分支  
 
 `$ git branch`  
->查看当前分支，当前分支前面会显示\*  
+
++ 查看当前分支，当前分支前面会显示\*  
 
 `$ git merge`  
->合并指定分支到当前分支  
+
++ 合并指定分支到当前分支  
 合并后即可删除分支dev `$ git branch -d dev`  
        
 ---
 ## 实现AJAX的基本步骤  
-> 要完整实现一个AJAX异步调用和局部刷新,通常需要以下几个步骤:  
->>    (1)创建XMLHttpRequest对象,也就是创建一个异步调用对象。  
+
++ 要完整实现一个AJAX异步调用和局部刷新,通常需要以下几个步骤:  
+>   (1)创建XMLHttpRequest对象,也就是创建一个异步调用对象。  
       (2)创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.  
       (3)设置响应HTTP请求状态变化的函数.  
       (4)发送HTTP请求.  
       (5)获取异步调用返回的数据.  
       (6)使用JavaScript和DOM实现局部刷新.   
  
->onreadystatechange 属性存有处理服务器响应的函数。  
++ onreadystatechange 属性存有处理服务器响应的函数。  
 readyState 属性存有服务器响应的状态信息。  
 每当 readyState 改变时，onreadystatechange 函数就会被执行。  
->readyState 属性可能的值：  
->>0 请求未初始化（在调用 open() 之前）  
+
++ readyState 属性可能的值：  
+  > 0 请求未初始化（在调用 open() 之前）  
      1 请求已提出（调用 send() 之前）  
      2 请求已发送（这里通常可以从响应得到内容头部）  
      3 请求处理中（响应中通常有部分数据可用，但是服务器还没有完成响应）  
      4 请求已完成（可以访问服务器响应并使用它)  
      example:
->>>`xmlHttp.onreadystatechange=function()  
->>>{  
->>>if(xmlHttp.readyState==4)  
->>>{  
->>>document.myForm.time.value=xmlHttp.responseText;  
->>>}  
->>>}`  
+>>`xmlHttp.onreadystatechange=function()  
+	{  
+	if(xmlHttp.readyState==4)  
+   	{  
+	document.myForm.time.value=xmlHttp.responseText;  
+   	}  
+   	}`  
 
 ### xmlhttprequst的方法  
->open() 有三个参数。    
->>第一个参数定义发送请求所使用的方法,  
+
++ open() 有三个参数。    
+>第一个参数定义发送请求所使用的方法,  
      第二个参数规定服务器端脚本的URL，  
      第三个参数规定应当对请求进行异步地处理。   
->>>example: `xmlHttp.open("GET","test.php",true);`  
+>>example: `xmlHttp.open("GET","test.php",true);`  
 若为true，即为异步请求，需要写一个回调函数（xmlHttp.onstatechange=function()中写）    
 回调函数的核心内容，就是获取后台返回的数据，然后将这个数据赋值给div。  
 xmlHttp对象有两个属性都可以获取后台返回的数据，分别是：responseText和responseXML，  
 其中responseText是用来获得字符串形式的响应数据，responseXML是用来获得 XML 形式的响应数据，取决于后台给返回的数据类型。   
 
 ### GET与POST请求区别：
->get是从服务器上获取数据，post是向服务器传送数据。  
++ get是从服务器上获取数据，post是向服务器传送数据。  
 
->Get方式在通过URL提交数据，数据在URL中可以看到  
++ Get方式在通过URL提交数据，数据在URL中可以看到  
 POST方式，数据放置在HTML HEADER内提交。  
 
->对于get方式，服务器端用request.getQueryString()可以获取GET请求参数的变量值  
++ 对于get方式，服务器端用request.getQueryString()可以获取GET请求参数的变量值  
 对于post方式，服务器端用request.getParameter获取提交的数据。  
 
->GET方式提交的数据最多只能有1024字节，而POST则没有此限制。  
++ GET方式提交的数据最多只能有1024字节，而POST则没有此限制。  
 
->使用 Get 的时候，参数会显示在地址栏上，而 Post 不会  
++ 使用 Get 的时候，参数会显示在地址栏上，而 Post 不会  
 所以，如果这些数据是中文数据而且是非敏感数据，那么使用 get  
 如果用户输入的数据不是中文字符而且包含敏感数据，那么还是使用 post为好。  
+
+
 
 
 
